@@ -1,0 +1,42 @@
+{
+  "name": "go2abroad-registry-mcp",
+  "version": "1.0.0",
+  "private": false,
+  "type": "module",
+  "description": "GO2ABROAD Registry remote MCP SSE server on Cloudflare Workers — statutory compliance intelligence across 80+ jurisdictions.",
+  "license": "MIT",
+  "homepage": "https://registry.go2abroad.space",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/go2abroad-registry/go2abroad-registry-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/go2abroad-registry/go2abroad-registry-mcp/issues"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "go2abroad",
+    "compliance",
+    "cloudflare-workers",
+    "sse",
+    "statutory-dossiers"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "cf-typegen": "wrangler types",
+    "typecheck": "tsc --noEmit",
+    "dry-run": "wrangler deploy --dry-run"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.22.0",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20261103.1",
+    "typescript": "^5.9.3",
+    "wrangler": "^4.42.0"
+  }
+}
